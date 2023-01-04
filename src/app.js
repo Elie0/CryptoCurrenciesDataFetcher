@@ -2,6 +2,7 @@ const FetchData = require('./utils/DataFetcher')
 const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
+const PORT = process.env.PORT || 3000
 const app = express()
 
 publicPath = path.join(__dirname,'../public')
@@ -49,7 +50,7 @@ app.get('/fetcher',(req,res)=>{
 
 })
 
-app.listen(3030,()=>{
-    console.log('Port 3030 ready and open')
+app.listen(PORT,()=>{
+    console.log('Port 3000 ready and open')
 })
 
